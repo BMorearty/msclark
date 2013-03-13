@@ -16,3 +16,4 @@
 //= require_tree .
 //= require js/jquery-ui-1.10.1.custom.min
 //= require js/bootstrap.min
+//= require d3.v3.min
