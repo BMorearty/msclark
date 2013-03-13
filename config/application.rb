@@ -20,5 +20,6 @@ module Msclark
     # config.i18n.default_locale = :de
 
     config.assets.paths << Rails.root.join("vendor", "assets", "jquery-ui")
+    config.assets.paths << Rails.root.join("vendor", "assets", "bootstrap")
   end
 end
