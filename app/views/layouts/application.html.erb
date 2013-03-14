@@ -6,7 +6,7 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="<%= request.params[:controller] %> <%= request.params[:action] %>">
 
   <div id="notice"><%= notice %></div>
   <div id="alert"><%= alert %></div>
@@ -19,9 +19,7 @@
 
   <h1><%= link_to "I Lrnz U", root_path %></h1>
 
-  <div class="<%= request.params[:controller] %> <%= request.params[:action] %>">
-    <%= yield %>
-  </div>
+  <%= yield %>
 
 </body>
 </html>
