@@ -1,10 +1,11 @@
-<p id="notice"><%= notice %></p>
+<h2>Teacher</h2>
+<%= render @teacher %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @teacher.name %>
-</p>
-
-
-<%= link_to 'Edit', edit_teacher_path(@teacher) %> |
-<%= link_to 'Back', teachers_path %>
+<div>
+  <div>
+    <strong>Courses:</strong>
+  </div>
+  <% @teacher.courses.each do |course| %>
+    <%= render course %>
+  <% end %>
+</div>

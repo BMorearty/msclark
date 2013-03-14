@@ -1,20 +1,17 @@
-<p id="notice"><%= notice %></p>
+<h2>Course</h2>
 
-<p>
+<div>
   <strong>Name:</strong>
   <%= @course.name %>
-</p>
+</div>
 
-<p>
+<div>
   <strong>Description:</strong>
   <%= @course.description %>
-</p>
+</div>
 
-<p>
+<div>
   <strong>Teacher:</strong>
-  <%= @course.teacher %>
-</p>
+  <%= render @course.teacher %>
+</div>
 
-
-<%= link_to 'Edit', edit_course_path(@course) %> |
-<%= link_to 'Back', courses_path %>

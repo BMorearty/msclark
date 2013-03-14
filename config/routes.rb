@@ -1,9 +1,8 @@
 Msclark::Application.routes.draw do
-  resources :courses
-
-  resources :teachers
-
-  resources :students
-
   root to: "home#index"
+
+  resources :courses
+  resources :teachers
+  resources :students
+  get "fake_data" => "home#fake_data"
 end

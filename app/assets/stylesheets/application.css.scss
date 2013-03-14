@@ -16,4 +16,39 @@
  */
 
 html { background: image-url("white_wall_hash.png"); margin: 0; padding: 0; font-family: "Verdana"; }
-body { background-color: white; width: 940px; margin: 0 auto; padding: 1em 3em 3em; }
+body { background-color: white; width: 600px; margin: 0 auto; padding: 1em 3em 3em; }
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: push-button;
+}
+
+.course {
+  .link, .full {
+    display: none;
+  }
+}
+
+.teacher {
+  .name, .full {
+    display: none;
+  }
+}
+
+.student {
+  .name, .full {
+    display: none;
+  }
+}
+
+h1 {
+  font-size: 200%;
+}
+
+h2 {
+  font-size: 180%;
+}
+
+.new-account {
+  float: right;
+  font-size: 130%;
+  margin-top: 1em;
+}

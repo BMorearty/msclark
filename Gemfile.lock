@@ -47,6 +47,8 @@ GEM
     eventmachine (1.0.3)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    faker (1.1.2)
+      i18n (~> 0.5)
     hike (1.2.1)
     i18n (0.6.4)
     jquery-rails (2.2.1)
@@ -127,6 +129,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   coffee-rails (~> 4.0.0.beta1)
+  faker
   jquery-rails
   meta_request
   rails (= 4.0.0.beta1)

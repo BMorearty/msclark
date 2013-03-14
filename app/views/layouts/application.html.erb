@@ -8,7 +8,16 @@
 </head>
 <body>
 
-<%= yield %>
+  <div id="notice"><%= notice %></div>
+  <div id="alert"><%= alert %></div>
+
+  <div class="new-account"><%= link_to "Make me a account", new_student_path %></div>
+
+  <h1><%= link_to "I Lrnz U", root_path %></h1>
+
+  <div class="<%= request.params[:controller] %> <%= request.params[:action] %>">
+    <%= yield %>
+  </div>
 
 </body>
 </html>

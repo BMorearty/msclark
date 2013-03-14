@@ -1,0 +1,10 @@
+.teachers {
+  &.show {
+    .teacher .full {
+      display: block;
+    }
+    .course .link {
+      display: block;
+    }
+  }
+}

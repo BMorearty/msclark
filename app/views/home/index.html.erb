@@ -1,1 +1,10 @@
-<h1>I Lrnz U</h1>
+<div>
+  <h2>Online MBA Courses</h2>
+  <div>
+    <%= render @courses %>
+  </div>
+</div>
+
+<div id="fake_data">
+  <%= link_to "Generate fake data", fake_data_path, confirm: "Makey fakey?" %>
+</div>

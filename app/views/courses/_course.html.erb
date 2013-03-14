@@ -1,0 +1,22 @@
+<div class="course">
+
+  <div class="link">
+    <div class="name"><%= link_to course.name, course %></div>
+  </div>
+
+  <div class="full">
+    <p class="name">
+      <strong>Name:</strong>
+      <%= course.name %>
+    </p>
+    <p class="description">
+      <strong>Description:</strong>
+      <%= course.description %>
+    </p>
+    <p class="teacher">
+      <strong>Teacher:</strong>
+      <%= render course.teacher if course.teacher %>
+    </p>
+  </div>
+
+</div>
