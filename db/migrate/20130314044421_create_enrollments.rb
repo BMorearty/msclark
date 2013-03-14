@@ -6,5 +6,8 @@ class CreateEnrollments < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    # TODO: add_index :enrollments, :course_id
+    # TODO: add_index :enrollments, :student_id
   end
 end
