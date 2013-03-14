@@ -9,5 +9,6 @@ class CreateCourses < ActiveRecord::Migration
     end
 
     add_index :courses, :teacher_id
+    add_index :courses, :updated_at
   end
 end

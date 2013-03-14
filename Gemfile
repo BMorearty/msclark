@@ -21,4 +21,6 @@ group :development do
   gem 'binding_of_caller'
   gem 'faker'
   # TODO: gem 'bullet'
+  gem 'debugger'
+  gem 'awesome_print'
 end

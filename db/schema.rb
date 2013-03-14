@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20130314044421) do
   end
 
   add_index "courses", ["teacher_id"], name: "index_courses_on_teacher_id"
+  add_index "courses", ["updated_at"], name: "index_courses_on_updated_at"
 
   create_table "enrollments", force: true do |t|
     t.integer  "course_id"

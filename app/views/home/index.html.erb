@@ -1,7 +1,7 @@
 <div>
   <h2>Online MBA Courses</h2>
   <div>
-    <% cache @courses do %>
+    <% cache @courses.sort_by(&:updated_at).last do %>
       <%= render @courses %>
       <%= will_paginate @courses %>
     <% end %>
