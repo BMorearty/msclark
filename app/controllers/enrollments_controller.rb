@@ -8,6 +8,7 @@ class EnrollmentsController < ApplicationController
   end
 
 private
+
   # Never trust parameters from the scary internet, only allow the white list through.
   def enrollment_params
     params.require(:enrollment).permit(:course_id, :student_id)
