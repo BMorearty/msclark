@@ -1,8 +1,13 @@
 .home {
-  #fake_data {
-    float: right;
+  #admin {
+    margin-top: 2em;
+    padding-top: 2em;
+    border-top: 1px solid #ccc;
+    #fake-data {
+      display: inline-block;
+      margin-right: 2em;
+    }
   }
-
   .course .link {
     display: block;
   }
