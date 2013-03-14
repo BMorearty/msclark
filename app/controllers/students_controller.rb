@@ -8,6 +8,7 @@ class StudentsController < ApplicationController
 
   # GET /students/1
   def show
+    fresh_when @student
   end
 
   # GET /students/new

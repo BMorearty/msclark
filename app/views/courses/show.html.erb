@@ -15,6 +15,11 @@
   <%= render @course.teacher %>
 </div>
 
+<div>
+  <strong>Students:</strong>
+  <%= render @course.students %>
+</div>
+
 <% if current_user %>
   <% if enrolled? %>
     <div class="enrolled">You are enrolled.</div>

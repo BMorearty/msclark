@@ -4,10 +4,13 @@ class TeachersController < ApplicationController
   # GET /teachers
   def index
     @teachers = Teacher.order(:id).paginate(page: params[:page])
+    fresh_when last_modified: @teachers.sort_by(&:updated_at).last.updated_at if @teachers.present?
+    # Could also use @teachers.maximum(:updated_at), except it ignores pagination scope
   end
 
   # GET /teachers/1
   def show
+    fresh_when @teacher
   end
 
   # GET /teachers/new

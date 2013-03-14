@@ -10,6 +10,7 @@ class CoursesController < ApplicationController
 
   # GET /courses/1
   def show
+    fresh_when @course
   end
 
   # GET /courses/new

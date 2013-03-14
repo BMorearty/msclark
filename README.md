@@ -11,6 +11,7 @@ The faster branch has optimizations applied, including:
 * Fragment caching--specifically, Russian Doll caching
   (using `touch: true` on all `belongs_to` statements).
 * Turbolinks
+* Support for ETag and If-Not-Modified headers
 
 Copyright (c) 2013 Brian Morearty.
 All rights reserved.
