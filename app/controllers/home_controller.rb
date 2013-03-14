@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
-   def index
-    @courses = Course.order(:id).paginate(page: params[:page]).includes(:teacher)
+  def index
+    @courses = Course.order(:id).page(params[:page]).includes(:teacher)
     fresh_when @courses.sort_by(&:updated_at).last if @courses.present?
     # Could also use @courses.maximum(:updated_at), except it ignores pagination scope
   end

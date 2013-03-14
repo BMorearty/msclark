@@ -7,8 +7,8 @@ gem 'thin'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'dalli'
-gem 'will_paginate'
-#gem 'rack-mini-profiler' <== When turned on, client-side caching doesn't work
+gem 'kaminari'
+#TODO: gem 'rack-mini-profiler'  <== When turned on, client-side caching doesn't work
 
 group :assets do
   gem 'sass-rails',   '~> 4.0.0.beta1'

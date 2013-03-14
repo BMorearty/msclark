@@ -2,9 +2,9 @@
   <h2>Online MBA Courses</h2>
   <div>
     <%# If you say "cache @courses do", the memcache key will be too long %>
-    <% cache @courses.sort_by(&:updated_at).last do %>
+    <% cache @courses.maximum(:updated_at) do %>
       <%= render @courses %>
-      <%= will_paginate @courses %>
+      <%= paginate @courses %>
     <% end %>
   </div>
 </div>
