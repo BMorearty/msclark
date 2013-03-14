@@ -3,7 +3,7 @@ class TeachersController < ApplicationController
 
   # GET /teachers
   def index
-    @teachers = Teacher.paginate(page: params[:page])
+    @teachers = Teacher.order(:id).paginate(page: params[:page])
   end
 
   # GET /teachers/1

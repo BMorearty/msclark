@@ -3,7 +3,7 @@ class StudentsController < ApplicationController
 
   # GET /students
   def index
-    @students = Student.paginate(page: params[:page])
+    @students = Student.order(:id).paginate(page: params[:page])
   end
 
   # GET /students/1
@@ -12,7 +12,7 @@ class StudentsController < ApplicationController
 
   # GET /students/new
   def new
-    @student = Student.new
+    @student = Student.new(name: Faker::Name.name, email: Faker::Internet.email)
   end
 
   # GET /students/1/edit
@@ -25,6 +25,7 @@ class StudentsController < ApplicationController
 
     if @student.save
       redirect_to @student, notice: 'Student was successfully created.'
+      session[:current_user_id] = @student.id
     else
       render action: 'new'
     end
@@ -33,7 +34,7 @@ class StudentsController < ApplicationController
   # PATCH/PUT /students/1
   def update
     if @student.update(student_params)
-      redirect_to @student, notice: 'Student was successfully updated.'
+      redirect_to @student, notice: 'Logged in.'
     else
       render action: 'edit'
     end
