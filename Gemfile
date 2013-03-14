@@ -7,6 +7,7 @@ gem 'thin'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'will_paginate'
+#gem 'rack-mini-profiler'
 
 group :assets do
   gem 'sass-rails',   '~> 4.0.0.beta1'
@@ -19,4 +20,5 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'faker'
+  #gem 'bullet'
 end
