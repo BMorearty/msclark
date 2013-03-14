@@ -7,8 +7,8 @@ gem 'thin'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'dalli'
-gem 'will_paginate'
-#gem 'rack-mini-profiler'
+gem 'kaminari'
+#TODO: gem 'rack-mini-profiler'
 
 group :assets do
   gem 'sass-rails',   '~> 4.0.0.beta1'
