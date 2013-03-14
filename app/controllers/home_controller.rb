@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @courses = Course.order(:id)
+    @courses = Course.order(:id).page(params[:page])
   end
 
   def fake_data

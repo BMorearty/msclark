@@ -6,7 +6,7 @@ gem 'sqlite3'
 gem 'thin'
 gem 'jquery-rails'
 gem 'turbolinks'
-gem 'will_paginate'
+gem 'kaminari'
 # TODO: gem 'rack-mini-profiler'
 
 group :assets do
