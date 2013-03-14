@@ -16,5 +16,9 @@
 </div>
 
 <% if current_user %>
-  <%= button_to "Enroll", enrollments_path(enrollment: { course_id: @course.id, student_id: current_user.id }) %>
+  <% if enrolled? %>
+    <div class="enrolled">You are enrolled.</div>
+  <% else %>
+    <%= button_to "Enroll", enrollments_path(enrollment: { course_id: @course.id, student_id: current_user.id }) %>
+  <% end %>
 <% end %>
