@@ -1,4 +1,5 @@
-== README
+README
+======
 
 This sample app was prepared for Curious by Brian Morearty.
 
