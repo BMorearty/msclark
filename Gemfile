@@ -6,8 +6,9 @@ gem 'sqlite3'
 gem 'thin'
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'dalli'
 gem 'will_paginate'
-# TODO: gem 'rack-mini-profiler'
+gem 'rack-mini-profiler'
 
 group :assets do
   gem 'sass-rails',   '~> 4.0.0.beta1'

@@ -1,11 +1,13 @@
-<div class="teacher">
-  <span class="link">
-    <%= link_to teacher.name, teacher %>
-  </span>
-  <div class="full">
-    <div>
-      <strong>Name:</strong>
-      <%= teacher.name %>
+<% cache teacher do %>
+  <div class="teacher">
+    <span class="link">
+      <%= link_to teacher.name, teacher %>
+    </span>
+    <div class="full">
+      <div>
+        <strong>Name:</strong>
+        <%= teacher.name %>
+      </div>
     </div>
   </div>
-</div>
+<% end %>

@@ -1,15 +1,17 @@
-<div class="student">
-  <span class="link">
-    <%= link_to student.name, student %>
-  </span>
-  <div class="full">
-    <div>
-      <strong>Name:</strong>
-      <%= student.name %>
-    </div>
-    <div>
-      <strong>Email:</strong>
-      <%= student.email %>
+<% cache student do %>
+  <div class="student">
+    <span class="link">
+      <%= link_to student.name, student %>
+    </span>
+    <div class="full">
+      <div>
+        <strong>Name:</strong>
+        <%= student.name %>
+      </div>
+      <div>
+        <strong>Email:</strong>
+        <%= student.email %>
+      </div>
     </div>
   </div>
-</div>
+<% end %>

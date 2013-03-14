@@ -8,6 +8,6 @@ class CreateCourses < ActiveRecord::Migration
       t.timestamps
     end
 
-    # TODO: add_index :courses, :teacher_id
+    add_index :courses, :teacher_id
   end
 end

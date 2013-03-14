@@ -1,4 +1,6 @@
 <h2>Teachers</h2>
 
-<%= render @teachers %>
-<%= will_paginate @teachers %>
+<% cache @teachers do %>
+  <%= render @teachers %>
+  <%= will_paginate @teachers %>
+<% end %>

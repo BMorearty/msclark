@@ -5,7 +5,11 @@
   <div>
     <strong>Courses:</strong>
   </div>
-  <% @teacher.courses.each do |course| %>
-    <%= render course %>
+  <% cache @teacher do %>
+    <ul>
+      <% @teacher.courses.each do |course| %>
+        <li><%= render course %></li>
+      <% end %>
+    </ul>
   <% end %>
 </div>

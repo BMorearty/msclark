@@ -1,7 +1,10 @@
 <div>
   <h2>Online MBA Courses</h2>
   <div>
-    <%= render @courses %>
+    <% cache @courses do %>
+      <%= render @courses %>
+      <%= will_paginate @courses %>
+    <% end %>
   </div>
 </div>
 
