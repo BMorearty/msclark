@@ -6,6 +6,7 @@ gem 'sqlite3'
 gem 'thin'
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'will_paginate'
 
 group :assets do
   gem 'sass-rails',   '~> 4.0.0.beta1'
@@ -15,7 +16,7 @@ end
 
 group :development do
   gem 'meta_request'
-  gem "better_errors"
-  gem "binding_of_caller"
-  gem "faker"
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'faker'
 end

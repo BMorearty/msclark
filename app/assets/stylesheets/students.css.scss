@@ -4,4 +4,9 @@
       display: block;
     }
   }
+  &.show {
+    .student .full {
+      display: block;
+    }
+  }
 }

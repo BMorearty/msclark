@@ -3,8 +3,9 @@
   <div>
     <%= render @courses %>
   </div>
+  <%= will_paginate @courses %>
 </div>
 
 <div id="fake_data">
-  <%= link_to "Generate fake data", fake_data_path, confirm: "Makey fakey?" %>
+  <%= link_to "Generate fake data", fake_data_path, data: { confirm: "Makey fakey?" } %>
 </div>

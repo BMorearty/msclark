@@ -28,13 +28,13 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 }
 
 .teacher {
-  .name, .full {
+  .link, .full {
     display: none;
   }
 }
 
 .student {
-  .name, .full {
+  .link, .full {
     display: none;
   }
 }
@@ -51,4 +51,20 @@ h2 {
   float: right;
   font-size: 130%;
   margin-top: 1em;
+}
+
+.pagination {
+  margin-top: 1em;
+  .previous_page {
+    padding-right: 2em;
+  }
+  .next_page {
+    padding-left: 2em;
+  }
+  .current {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 4px;
+  }
 }

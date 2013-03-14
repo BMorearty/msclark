@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @courses = Course.all
+    @courses = Course.paginate(page: params[:page])
   end
 
   def fake_data

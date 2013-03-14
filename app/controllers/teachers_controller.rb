@@ -2,13 +2,11 @@ class TeachersController < ApplicationController
   before_action :set_teacher, only: [:show, :edit, :update, :destroy]
 
   # GET /teachers
-  # GET /teachers.json
   def index
-    @teachers = Teacher.all
+    @teachers = Teacher.paginate(page: params[:page])
   end
 
   # GET /teachers/1
-  # GET /teachers/1.json
   def show
   end
 
@@ -22,43 +20,29 @@ class TeachersController < ApplicationController
   end
 
   # POST /teachers
-  # POST /teachers.json
   def create
     @teacher = Teacher.new(teacher_params)
 
-    respond_to do |format|
-      if @teacher.save
-        format.html { redirect_to @teacher, notice: 'Teacher was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @teacher }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @teacher.errors, status: :unprocessable_entity }
-      end
+    if @teacher.save
+      redirect_to @teacher, notice: 'Teacher was successfully created.'
+    else
+      render action: 'new'
     end
   end
 
   # PATCH/PUT /teachers/1
-  # PATCH/PUT /teachers/1.json
   def update
-    respond_to do |format|
-      if @teacher.update(teacher_params)
-        format.html { redirect_to @teacher, notice: 'Teacher was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @teacher.errors, status: :unprocessable_entity }
-      end
+    if @teacher.update(teacher_params)
+      redirect_to @teacher, notice: 'Teacher was successfully updated.'
+    else
+      render action: 'edit'
     end
   end
 
   # DELETE /teachers/1
-  # DELETE /teachers/1.json
   def destroy
     @teacher.destroy
-    respond_to do |format|
-      format.html { redirect_to teachers_url }
-      format.json { head :no_content }
-    end
+    redirect_to teachers_url
   end
 
   private

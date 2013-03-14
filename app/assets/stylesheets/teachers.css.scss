@@ -1,4 +1,9 @@
 .teachers {
+  &.index {
+    .teacher .link {
+      display: block;
+    }
+  }
   &.show {
     .teacher .full {
       display: block;
