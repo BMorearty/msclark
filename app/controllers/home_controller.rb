@@ -6,7 +6,8 @@ class HomeController < ApplicationController
   def fake_data
     Teacher.transaction { 1000.times { Teacher.create! name: Faker::Name.name } }
     Student.transaction { 5000.times { Student.create! name: Faker::Name.name, email: Faker::Internet.email } }
-    Course.transaction { 5000.times { Course.create! name: Faker::Company.bs, description: Faker::Lorem.paragraph, teacher: Teacher.offset(rand(Teacher.count)).first } }
+    num_teachers = Teacher.count
+    Course.transaction { 5000.times { Course.create! name: Faker::Company.bs, description: Faker::Lorem.paragraph, teacher: Teacher.offset(rand(num_teachers)).first } }
     redirect_to root_path
   end
 
