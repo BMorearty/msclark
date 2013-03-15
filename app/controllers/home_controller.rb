@@ -4,10 +4,14 @@ class HomeController < ApplicationController
   end
 
   def fake_data
-    Teacher.transaction { 1000.times { Teacher.create! name: Faker::Name.name } }
-    Student.transaction { 5000.times { Student.create! name: Faker::Name.name, email: Faker::Internet.email } }
+    Teacher.transaction { teachers = Array.new(1000); Teacher.import [ :name ], teachers.map { |t| [ Faker::Name.name ] } }
+    Student.transaction { students = Array.new(5000); Student.import [ :name, :email ], students.map { |s| [ Faker::Name.name, Faker::Internet.email ] } }
     num_teachers = Teacher.count
-    Course.transaction { 5000.times { Course.create! name: Faker::Company.bs, description: Faker::Lorem.paragraph, teacher: Teacher.offset(rand(num_teachers)).first } }
+    Course.transaction do
+      courses = Array.new(5000)
+      Course.import [ :name, :description, :teacher_id ],
+                    courses.map { |c| [ Faker::Company.bs, Faker::Lorem.paragraph, Teacher.offset(rand(num_teachers)).limit(1).pluck(:id).first ] }
+    end
     redirect_to root_path
   end
 
