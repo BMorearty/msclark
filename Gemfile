@@ -8,7 +8,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'dalli'
 gem 'kaminari'
-#TODO: gem 'rack-mini-profiler'  <== When turned on, client-side caching doesn't work
+# TODO: gem 'rack-mini-profiler'
+gem 'activerecord-import'
 
 group :assets do
   gem 'sass-rails',   '~> 4.0.0.beta1'
